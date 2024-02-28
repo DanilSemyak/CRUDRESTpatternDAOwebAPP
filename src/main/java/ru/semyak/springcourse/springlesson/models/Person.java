@@ -1,9 +1,20 @@
 package ru.semyak.springcourse.springlesson.models;
 
+import jakarta.validation.constraints.*;
+
 public class Person {
     private int id;
+
+    @NotEmpty(message = "Имя не должно быть пустым!")
+    @Size(min = 2, max = 20, message = "Значение имени некорректное!")
     private String name;
+
+    @Min(value = 0, message = "Возраст не может быть отрицательным")
+    @Max(value = 120, message = "Значение возраста слишком большое!")
     private int age;
+
+    @NotEmpty(message = "Значение эл.почты обязательно!")
+    @Email(message = "Почта должна быть валидной!")
     private String email;
 
     public Person(int id, String name, int age, String email) {
