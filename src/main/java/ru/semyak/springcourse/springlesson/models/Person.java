@@ -5,6 +5,7 @@ import jakarta.validation.constraints.*;
 public class Person {
     private int id;
 
+
     @NotEmpty(message = "Имя не должно быть пустым!")
     @Size(min = 2, max = 20, message = "Значение имени некорректное!")
     private String name;
