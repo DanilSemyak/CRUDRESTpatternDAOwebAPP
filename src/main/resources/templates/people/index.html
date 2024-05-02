@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Все люди</title>
+    <title>Index</title>
 </head>
 <body>
 
@@ -10,8 +10,11 @@
     <a th:href="@{/people/{id}(id=${person.getId()})}"
        th:text="${person.getName() + ', ' + person.getAge()}">user</a>
 </div>
-<br>
+
+<br/>
 <hr/>
-<a href="/people/new">Добавить новых людей</a>
+
+<a href="/people/new">Create new person</a>
+
 </body>
 </html>
